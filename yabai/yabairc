@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Basic yabai configuration
+yabai -m config external_bar all:32:0
+yabai -m config window_shadow on
+yabai -m config window_border on
+
+# Automatic window snapping
+yabai -m config auto_balance on
+yabai -m config auto_padding on
+
+# Layout modes
+yabai -m config layout bsp
