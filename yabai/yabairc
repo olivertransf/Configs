@@ -3,11 +3,24 @@
 # Basic yabai configuration
 yabai -m config external_bar all:32:0
 yabai -m config window_shadow on
-yabai -m config window_border on
 
 # Automatic window snapping
 yabai -m config auto_balance on
-yabai -m config auto_padding on
 
 # Layout modes
 yabai -m config layout bsp
+
+# Ignore specific apps
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Warp$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Spotify$" manage=off
+
+# Ignore Zen Browser popups/dialogs but manage normal browser windows
+yabai -m rule --add app="^(Zen|Zen Browser)$" role="^AXDialog$" manage=off
+yabai -m rule --add app="^(Zen|Zen Browser)$" subrole="^AXDialog$" manage=off
+yabai -m rule --add app="^(Zen|Zen Browser)$" role="^AXSystemDialog$" manage=off
+yabai -m rule --add app="^(Zen|Zen Browser)$" subrole="^AXSystemDialog$" manage=off
+
+# Ignore Zen Picture-in-Picture window specifically
+yabai -m rule --add app="^(Zen|Zen Browser)$" title="^Picture-in-Picture$" manage=off

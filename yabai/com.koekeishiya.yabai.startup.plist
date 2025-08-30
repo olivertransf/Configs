@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.koekeishiya.yabai.startup</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/olivertran/.config/yabai/startup.sh</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <false/>
+    <key>StandardOutPath</key>
+    <string>/tmp/yabai_startup.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/yabai_startup.err</string>
+</dict>
+</plist>
